@@ -7,6 +7,7 @@ import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.os.Build;
 import android.preference.PreferenceManager;
+import android.util.Log;
 
 import java.util.Locale;
 
@@ -39,6 +40,7 @@ public class LocaleManager {
     }
 
     private static Context updateResources(Context context, String language) {
+        Log.d("updateResources", "lang: " + language);
         Locale locale = new Locale(language);
         Locale.setDefault(locale);
 
